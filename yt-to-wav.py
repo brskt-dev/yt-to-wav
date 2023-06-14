@@ -29,12 +29,8 @@ def converter_para_wav(nome_arquivo):
 
 # Função para excluir o arquivo MP4
 def excluir_arquivo(nome_arquivo):
-    time.sleep(6)  # Atraso de 6 segundos
-    try:
-        os.remove(nome_arquivo)
-        exibir_caixa_dialogo_info("O arquivo foi excluído com sucesso!")
-    except OSError as e:
-        exibir_caixa_dialogo_erro(f"Ocorreu um erro ao excluir o arquivo: {e}")
+    time.sleep(1)
+    os.remove(nome_arquivo)
 
 # Prompt para baixar e converter o vídeo
 url = obter_input_caixa_dialogo("Digite a URL do vídeo do YouTube:")

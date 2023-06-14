@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, simpledialog
 
 def exibir_caixa_dialogo_info(mensagem, titulo="Informação"):
     tk.Tk().withdraw()
@@ -12,3 +12,6 @@ def exibir_caixa_dialogo_erro(mensagem, titulo="Erro"):
 def obter_input_caixa_dialogo(mensagem, titulo="Entrada"):
     tk.Tk().withdraw()
     return simpledialog.askstring(titulo, mensagem)
+
+def remove_caixa_dialogo(mensagem):
+    messagebox.remove()
